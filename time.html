@@ -1,0 +1,21 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+ "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="Content-Script-Type" content="text/javascript">
+<meta name="Content-Style-Type" content="text/css">
+<title>Loading...</title>
+<script src="moment.js"></script>
+<script src="moment-timezone-with-data.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+function setTimeInBackground() {
+  document.title = moment().tz('Australia/Melbourne').format('H:mm:ss');
+  setTimeout(setTimeInBackground, 1000);
+}
+setTimeInBackground();
+</script>
+</body>
+</html>
